@@ -2,7 +2,7 @@
 $message="";
 if(count($_POST)>0) {
 $conn = mysql_connect("localhost","root","");
-mysql_select_db("phppot_examples",$conn);
+mysql_select_db("database",$conn);
 $result = mysql_query("SELECT * FROM users WHERE userName='" . $_POST["userName"] . "' and password = '". $_POST["password"]."'");
 $count  = mysql_num_rows($result);
 if($count==0) {
